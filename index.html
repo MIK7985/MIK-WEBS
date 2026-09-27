@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>MikWebs — Modern Web Design &amp; Development Studio</title>
+  <meta name="title" content="MikWebs — Modern Web Design &amp; Development Studio">
+  <meta name="description" content="MikWebs designs and develops modern, responsive websites for businesses, brands, and entrepreneurs. Built to help businesses look professional and get more customers.">
+  <meta name="keywords" content="web design, web development, UI/UX design, landing pages, responsive websites, MikWebs">
+  <meta name="author" content="Muhammed Irfan K (MikWebs)">
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
+
+  <!-- Early Theme Initialization to prevent Flash of Unstyled Content (FOUC) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('mikwebs_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+  <link rel="canonical" href="https://mikwebs.online/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mikwebs.online/">
+  <meta property="og:title" content="MikWebs — Modern Web Design &amp; Development Studio">
+  <meta property="og:description" content="We design and develop modern websites that help businesses look professional and get more customers.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://mikwebs.online/">
+  <meta property="twitter:title" content="MikWebs — Modern Web Design &amp; Development Studio">
+  <meta property="twitter:description" content="We design and develop modern websites that help businesses look professional and get more customers.">
+  <meta property="twitter:image" content="assets/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       1. NAVIGATION HEADER
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo: Exact logo asset preserved in original proportions -->
+      <a href="#hero" class="brand-logo-link" aria-label="MikWebs Home">
+        <img src="assets/logo.png" alt="MikWebs Logo" class="brand-logo-img" width="168" height="38" decoding="async">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#estimator" class="nav-link">Estimator</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="availability-pill" title="Current studio bandwidth">
+            <span class="pulse-dot"></span>
+            <span>Available for new projects</span>
+          </div>
+
+          <!-- Theme Toggle Button (Desktop) -->
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark mode" title="Toggle dark / light mode">
+            <span class="theme-icon-sun" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+            <span class="theme-icon-moon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+          </button>
+
+          <a href="#contact" class="btn btn-primary btn-sm">Start a Project</a>
+        </div>
+      </nav>
+
+      <!-- Mobile Controls (Theme Toggle & Hamburger) -->
+      <div class="mobile-header-controls">
+        <button type="button" class="theme-toggle-btn mobile-theme-btn" id="mobileThemeToggleBtn" aria-label="Toggle dark mode" title="Toggle dark / light mode">
+          <span class="theme-icon-sun" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </span>
+          <span class="theme-icon-moon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <nav class="mobile-nav-links">
+      <a href="#work" class="mobile-nav-link">
+        <span>Work</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+      <a href="#services" class="mobile-nav-link">
+        <span>Services</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+      <a href="#process" class="mobile-nav-link">
+        <span>Process</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+      <a href="#estimator" class="mobile-nav-link">
+        <span>Scope Estimator</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+      <a href="#faq" class="mobile-nav-link">
+        <span>FAQ</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+      <a href="#about" class="mobile-nav-link">
+        <span>About</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+      <a href="#contact" class="mobile-nav-link">
+        <span>Contact</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+    </nav>
+
+    <div class="mobile-drawer-bottom">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+        <div class="availability-pill">
+          <span class="pulse-dot"></span>
+          <span>Available for new projects</span>
+        </div>
+        <button type="button" class="theme-toggle-btn" id="drawerThemeToggleBtn" aria-label="Toggle dark mode" title="Toggle dark / light mode">
+          <span class="theme-icon-sun" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </span>
+          <span class="theme-icon-moon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-lg" style="width: 100%;">Start a Project</a>
+      <a href="https://instagram.com/mikwebs" target="_blank" rel="noopener noreferrer" class="btn btn-instagram" style="width: 100%;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        Follow @mikwebs
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         2. HERO SECTION
+         ======================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-content">
+          <!-- Studio Category Eyebrow Badge -->
+          <div class="hero-header-meta">
+            <div class="credibility-pill">
+              <span class="credibility-dot"></span>
+              <span>Web Design · Development · UI/UX</span>
+            </div>
+          </div>
+
+          <!-- Main Dominant Headline -->
+          <h1 class="hero-headline">
+            Websites that make your business<br>
+            <span>look as good as it is.</span>
+          </h1>
+
+          <!-- Supporting Text -->
+          <p class="hero-subtext">
+            We design and develop modern websites that help businesses look professional, build credibility, and get more customers.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary btn-lg">Start a Project →</a>
+            <a href="#work" class="btn btn-secondary btn-lg">View Our Work</a>
+          </div>
+
+          <!-- Subtle Trust / Value Line -->
+          <p class="hero-offer-line">
+            Custom UI/UX · Responsive Development · Built for Conversions
+          </p>
+        </div>
+
+        <!-- Portfolio Preview Directly Below Hero CTA -->
+        <div class="hero-portfolio-preview reveal-on-scroll">
+          <div class="hero-showcase-stage">
+            
+            <!-- Preview Card 1 (Left): Decore Developers Website -->
+            <div class="hero-preview-card card-left" data-project-trigger="decore-website" role="button" tabindex="0" aria-label="Preview Decore Developers Website">
+              <div class="preview-browser-bar">
+                <div class="preview-dots">
+                  <span class="preview-dot dot-red"></span>
+                  <span class="preview-dot dot-yellow"></span>
+                  <span class="preview-dot dot-green"></span>
+                </div>
+                <span class="preview-url">decoredevelopers.in</span>
+              </div>
+              <div class="preview-media-box">
+                <img src="assets/projects/decore-website.png" alt="Decore Developers Website Preview" loading="lazy">
+              </div>
+              <div class="preview-footer-meta">
+                <span class="preview-meta-title">Decore Developers</span>
+                <span class="preview-meta-tag">Business</span>
+              </div>
+            </div>
+
+            <!-- Preview Card 2 (Center - Primary & Elevated): ShoeDrop E-Commerce -->
+            <div class="hero-preview-card card-featured" data-project-trigger="shoedrop" role="button" tabindex="0" aria-label="Preview ShoeDrop E-Commerce Store">
+              <div class="preview-browser-bar">
+                <div class="preview-dots">
+                  <span class="preview-dot dot-red"></span>
+                  <span class="preview-dot dot-yellow"></span>
+                  <span class="preview-dot dot-green"></span>
+                </div>
+                <span class="preview-url">shoedrop.online</span>
+                <span class="chip-badge" style="background:#EF4444; color:#FFFFFF; font-size:0.625rem; font-weight:700; padding:1px 6px; border-radius:10px;">FEATURED E-COMMERCE</span>
+              </div>
+              <div class="preview-media-box">
+                <img src="assets/projects/shoedrop.png" alt="ShoeDrop Sneakers E-Commerce Store Preview" loading="eager">
+              </div>
+              <div class="preview-footer-meta">
+                <div>
+                  <span class="preview-meta-title">ShoeDrop</span>
+                  <span style="font-size:0.75rem; color:var(--text-muted); display:block;">Sneakers &amp; Footwear • Live Store</span>
+                </div>
+                <span class="badge badge-live">Live Client</span>
+              </div>
+            </div>
+
+            <!-- Preview Card 3 (Right): Decore Developers Portal -->
+            <div class="hero-preview-card card-right" data-project-trigger="decore-app" role="button" tabindex="0" aria-label="Preview Decore Developers Employee Portal">
+              <div class="preview-browser-bar">
+                <div class="preview-dots">
+                  <span class="preview-dot dot-red"></span>
+                  <span class="preview-dot dot-yellow"></span>
+                  <span class="preview-dot dot-green"></span>
+                </div>
+                <span class="preview-url">decoredevelopers.co.in</span>
+              </div>
+              <div class="preview-media-box">
+                <img src="assets/projects/decore-app.png" alt="Decore Developers Management App Preview" loading="lazy">
+              </div>
+              <div class="preview-footer-meta">
+                <span class="preview-meta-title">Decore Portal</span>
+                <span class="preview-meta-tag">Web App</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Subtle Visual Prompt to Work Section -->
+          <div class="hero-explore-bar">
+            <a href="#work" class="hero-portfolio-explore-link">
+              <span>Explore All Selected Work</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         2.5. THE LAUNCH OFFER ($200 · 3-DAY DELIVERY · WHAT'S INCLUDED)
+         ======================================================================== -->
+    <section class="section offer-spotlight-section" id="offer">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Introductory Offer</span>
+          </div>
+          <h2 class="section-title">The Launch Offer</h2>
+          <p class="section-desc">
+            Everything you need to launch a professional single-page website for your business.
+          </p>
+        </div>
+
+        <div class="launch-offer-card reveal-on-scroll">
+          <div class="offer-card-glow" aria-hidden="true"></div>
+
+          <!-- Top Row: Price, Delivery & Action -->
+          <div class="offer-card-top-row">
+            <div>
+              <div class="offer-card-badge-row">
+                <span class="offer-pill-badge">Limited Launch Offer</span>
+                <span class="offer-delivery-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  3-Day Delivery
+                </span>
+              </div>
+              <div class="offer-pricing-display">
+                <span class="offer-price-num">$200</span>
+                <span class="offer-price-subtext">One-time introductory price</span>
+              </div>
+              <p class="offer-card-desc" style="margin-bottom: 0;">
+                Single page · Responsive · Custom design · 3-day delivery for standard projects
+              </p>
+            </div>
+
+            <div class="offer-action-box">
+              <a href="#contact" class="btn btn-primary btn-lg offer-main-btn" data-action="claim-launch-offer">
+                Start Your Project →
+              </a>
+              <span class="offer-scope-disclaimer">
+                Limited launch offer. Final scope confirmed before work begins.
+              </span>
+            </div>
+          </div>
+
+          <!-- What's Included (8 Items) -->
+          <div class="offer-card-included-area">
+            <h3 class="offer-included-title">What's included</h3>
+            
+            <div class="checklist-items-grid">
+              <div class="checklist-item">
+                <span class="check-symbol">✓</span>
+                <span class="checklist-item-title">Custom landing-page design</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-symbol">✓</span>
+                <span class="checklist-item-title">Responsive desktop &amp; mobile development</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-symbol">✓</span>
+                <span class="checklist-item-title">Up to 5–6 content sections</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-symbol">✓</span>
+                <span class="checklist-item-title">Contact / CTA section</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-symbol">✓</span>
+                <span class="checklist-item-title">Basic SEO setup</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-symbol">✓</span>
+                <span class="checklist-item-title">Social sharing metadata</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-symbol">✓</span>
+                <span class="checklist-item-title">Website deployment assistance</span>
+              </div>
+              <div class="checklist-item">
+                <span class="check-symbol">✓</span>
+                <span class="checklist-item-title">1 revision round</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scope Boundaries (Simple Note) -->
+          <div class="offer-card-complexity-note">
+            <span class="complexity-pill">Need something more complex?</span>
+            <p class="complexity-note-text">
+              The $200 launch offer is designed for a standard single-page landing page. E-commerce, CMS/blogs, advanced booking systems, custom web applications, extensive animations and additional pages are quoted separately.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. SELECTED WORK / PORTFOLIO
+         ======================================================================== -->
+    <section class="section work-section" id="work">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Portfolio</span>
+          </div>
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-desc">
+            A selection of websites designed and developed by MikWebs.
+          </p>
+        </div>
+
+        <!-- Category Filter Bar with counts -->
+        <div class="work-filter-bar reveal-on-scroll" role="tablist" aria-label="Portfolio Filters">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Work (4)</button>
+          <button class="filter-btn" data-filter="website" role="tab" aria-selected="false">Websites (2)</button>
+          <button class="filter-btn" data-filter="ecommerce" role="tab" aria-selected="false">E-Commerce (1)</button>
+          <button class="filter-btn" data-filter="webapp" role="tab" aria-selected="false">Web Applications (1)</button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="project-grid">
+
+          <!-- Project 1: ShoeDrop (E-Commerce Store) -->
+          <article class="project-card reveal-on-scroll" data-category="ecommerce">
+            <div class="project-media" data-project-trigger="shoedrop" tabindex="0" role="button" aria-label="View ShoeDrop E-Commerce Store Details">
+              <img src="assets/projects/shoedrop.png" alt="ShoeDrop Sneakers and Footwear E-Commerce Storefront Preview" class="project-img">
+              <div class="project-media-overlay">
+                <span class="view-btn-pill">
+                  View Project Details
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-category">E-Commerce Store</span>
+                <span class="badge badge-live">Live Client Store</span>
+              </div>
+              <h3 class="project-title">ShoeDrop</h3>
+              <p class="project-description">
+                A high-conversion e-commerce storefront engineered for sneaker drops and athletic footwear, featuring dynamic season drop banners, category discovery, and frictionless shopping.
+              </p>
+              <div class="project-services">
+                <span class="service-tag">E-Commerce UX</span>
+                <span class="service-tag">Responsive Storefront</span>
+                <span class="service-tag">Cart Architecture</span>
+                <span class="service-tag">Mobile Shopping</span>
+                <span class="service-tag">Speed Tuning</span>
+              </div>
+              <div class="project-actions-row">
+                <a href="#" class="project-action-link" data-project-trigger="shoedrop">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://shoedrop.online/" target="_blank" rel="noopener noreferrer" class="project-visit-link" title="Visit shoedrop.online in a new tab">
+                  <span>shoedrop.online</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Decore Developers (Business Website) -->
+          <article class="project-card reveal-on-scroll" data-category="website">
+            <div class="project-media" data-project-trigger="decore-website" tabindex="0" role="button" aria-label="View Decore Developers Project Details">
+              <img src="assets/projects/decore-website.png" alt="Decore Developers Website Design Preview" class="project-img">
+              <div class="project-media-overlay">
+                <span class="view-btn-pill">
+                  View Project Details
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-category">Business Website</span>
+                <span class="badge badge-live">Live Client Website</span>
+              </div>
+              <h3 class="project-title">Decore Developers</h3>
+              <p class="project-description">
+                A high-performance static marketing website for Kerala's leading Plaster of Paris and interior design specialists, showcasing bespoke false ceiling galleries, client trust signals, and direct WhatsApp inquiry channels.
+              </p>
+              <div class="project-services">
+                <span class="service-tag">UI/UX Design</span>
+                <span class="service-tag">Static Frontend</span>
+                <span class="service-tag">Responsive Gallery</span>
+                <span class="service-tag">WhatsApp Lead Capture</span>
+                <span class="service-tag">Local SEO</span>
+              </div>
+              <div class="project-actions-row">
+                <a href="#" class="project-action-link" data-project-trigger="decore-website">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://decoredevelopers.in" target="_blank" rel="noopener noreferrer" class="project-visit-link" title="Visit decoredevelopers.in in a new tab">
+                  <span>decoredevelopers.in</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Decore Developers Portal (Web App) -->
+          <article class="project-card reveal-on-scroll" data-category="webapp">
+            <div class="project-media" data-project-trigger="decore-app" tabindex="0" role="button" aria-label="View Decore Developers Employee Portal Details">
+              <img src="assets/projects/decore-app.png" alt="Decore Developers Employee Management App Preview" class="project-img">
+              <div class="project-media-overlay">
+                <span class="view-btn-pill">
+                  View Project Details
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-category">Web Application</span>
+                <span class="badge badge-live">Live Client Web App</span>
+              </div>
+              <h3 class="project-title">Decore Developers Portal</h3>
+              <p class="project-description">
+                A custom cloud-based workforce and operations management platform tracking 54+ employees, daily site attendance, inventory dispatch, and ongoing construction projects.
+              </p>
+              <div class="project-services">
+                <span class="service-tag">Dashboard UX</span>
+                <span class="service-tag">Workforce Attendance</span>
+                <span class="service-tag">Site Material Logs</span>
+                <span class="service-tag">Role-Based Access</span>
+              </div>
+              <div class="project-actions-row">
+                <a href="#" class="project-action-link" data-project-trigger="decore-app">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://decoredevelopers.co.in" target="_blank" rel="noopener noreferrer" class="project-visit-link" title="Visit decoredevelopers.co.in in a new tab">
+                  <span>decoredevelopers.co.in</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Techno Panels (Corporate Website) -->
+          <article class="project-card reveal-on-scroll" data-category="website">
+            <div class="project-media" data-project-trigger="techno-panels" tabindex="0" role="button" aria-label="View Techno Panels Project Details">
+              <img src="assets/projects/techno-panels.png" alt="Techno Panels Electrical Panel Board Manufacturers Preview" class="project-img">
+              <div class="project-media-overlay">
+                <span class="view-btn-pill">
+                  View Project Details
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-category">Corporate Website</span>
+                <span class="badge badge-live">Live Client Website</span>
+              </div>
+              <h3 class="project-title">Techno Panels</h3>
+              <p class="project-description">
+                Corporate industrial website for CPRI-certified electrical panel board manufacturers, showcasing custom power switchboards, engineering compliance, and automated RFQ quotation touchpoints.
+              </p>
+              <div class="project-services">
+                <span class="service-tag">Corporate UX</span>
+                <span class="service-tag">Product Catalog</span>
+                <span class="service-tag">Industrial Design</span>
+                <span class="service-tag">RFQ Quote Engine</span>
+              </div>
+              <div class="project-actions-row">
+                <a href="#" class="project-action-link" data-project-trigger="techno-panels">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://technopanels.in" target="_blank" rel="noopener noreferrer" class="project-visit-link" title="Visit technopanels.in in a new tab">
+                  <span>technopanels.in</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. SERVICES ("What we do")
+         ======================================================================== -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Capabilities</span>
+          </div>
+          <h2 class="section-title">What we do</h2>
+          <p class="section-desc">
+            Simple, focused digital services designed to help businesses look exceptional and win clients.
+          </p>
+        </div>
+
+        <!-- Services Grid: 3 Clear Offerings -->
+        <div class="services-grid services-grid-3">
+          
+          <!-- Service 1: Landing Pages (Primary Offer) -->
+          <div class="service-card service-card-featured reveal-on-scroll">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <span class="chip-badge" style="background:var(--accent-gradient); color:#FFFFFF; font-size:0.6875rem; font-weight:700; padding:2px 8px; border-radius:12px;">3-DAY LAUNCH</span>
+            </div>
+            <h3 class="service-card-title">Landing Pages</h3>
+            <p class="service-card-desc">
+              High-converting single-page websites crafted to turn traffic into qualified enquiries and booked appointments.
+            </p>
+            <div class="service-card-features">
+              <div class="service-feature-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Clear single-purpose layout built for conversions</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>3-day delivery for standard projects</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Includes enquiry form, mobile tuning &amp; SEO</span>
+              </div>
+            </div>
+            <div class="service-card-footer" style="margin-top: auto; padding-top: var(--space-md);">
+              <a href="#offer" class="service-card-link" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 0.875rem; color: var(--text-primary);">
+                <span>$200 Launch Offer</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2: Multi-Page Business Websites -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <span class="service-badge-subtle" style="font-size:0.6875rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.04em;">Full Presence</span>
+            </div>
+            <h3 class="service-card-title">Business Websites</h3>
+            <p class="service-card-desc">
+              Comprehensive multi-page digital architecture for established businesses ready to showcase their full scope of services.
+            </p>
+            <div class="service-card-features">
+              <div class="service-feature-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Bespoke visual layouts (no cookie-cutter templates)</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Multiple pages: Home, About, Services, Case Studies</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Scalable architecture ready for future growth</span>
+              </div>
+            </div>
+            <div class="service-card-footer" style="margin-top: auto; padding-top: var(--space-md);">
+              <a href="#estimator" class="service-card-link" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 0.875rem; color: var(--text-secondary);">
+                <span>Calculate Scope</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3: Website Redesign -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+              </div>
+              <span class="service-badge-subtle" style="font-size:0.6875rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.04em;">Modernise</span>
+            </div>
+            <h3 class="service-card-title">Website Redesigns</h3>
+            <p class="service-card-desc">
+              Transform an outdated or slow website into a modern, fast, mobile-friendly experience that reflects your current standards.
+            </p>
+            <div class="service-card-features">
+              <div class="service-feature-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Contemporary aesthetic upgrade &amp; typography</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Drastic mobile speed &amp; Core Web Vitals boost</span>
+              </div>
+              <div class="service-feature-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Preserve existing URLs &amp; Google search rankings</span>
+              </div>
+            </div>
+            <div class="service-card-footer" style="margin-top: auto; padding-top: var(--space-md);">
+              <a href="#contact" class="service-card-link" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 0.875rem; color: var(--text-secondary);">
+                <span>Request Redesign Audit</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. PROCESS ("From idea to launch")
+         ======================================================================== -->
+    <section class="section process-section" id="process">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Delivery Timeline</span>
+          </div>
+          <h2 class="section-title">From idea to launch in 3 days.</h2>
+          <p class="section-desc">
+            Share your requirements, review the design, and get your landing page ready for launch within 3 days for standard projects.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <!-- Day 1 -->
+          <div class="process-step reveal-on-scroll">
+            <span class="step-num">DAY 01</span>
+            <h3 class="step-title">Scope &amp; Discover</h3>
+            <p class="step-desc">
+              Share your business details, target audience, content, and logo assets. We align on conversion structure and lock in requirements.
+            </p>
+            <div class="step-details">Requirements • Goals • Scope</div>
+          </div>
+
+          <!-- Day 2 -->
+          <div class="process-step reveal-on-scroll">
+            <span class="step-num">DAY 02</span>
+            <h3 class="step-title">Custom Design &amp; Review</h3>
+            <p class="step-desc">
+              We design your bespoke landing page and share the design link for review, completing your 1 consolidated feedback round.
+            </p>
+            <div class="step-details">UI/UX • Typography • Feedback</div>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="process-step reveal-on-scroll">
+            <span class="step-num">DAY 03</span>
+            <h3 class="step-title">Development &amp; Launch</h3>
+            <p class="step-desc">
+              We build responsive code, set up SEO &amp; social metadata, test on mobile devices, and assist with pointing your custom domain.
+            </p>
+            <div class="step-details">Clean Code • SEO • Live Launch</div>
+          </div>
+        </div>
+
+        <!-- 3-Day Delivery Standard Note -->
+        <div class="delivery-standard-notice reveal-on-scroll">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          <span><strong>Standard Delivery:</strong> 3-day delivery for standard projects with timely asset provision and prompt review feedback.</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. INTERACTIVE PROJECT SCOPE & TIMELINE ESTIMATOR
+         ======================================================================== -->
+    <section class="section estimator-section" id="estimator">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Transparent Pricing</span>
+          </div>
+          <h2 class="section-title">Project Scope Estimator</h2>
+          <p class="section-desc">
+            Fast, responsive, and conversion-focused websites for modern businesses. Professional landing pages delivered in as little as 3 days.
+          </p>
+        </div>
+
+        <div class="estimator-card reveal-on-scroll" id="projectEstimator">
+          <div class="estimator-grid">
+            
+            <!-- Estimator Options Controls -->
+            <div class="estimator-options-col">
+              
+              <!-- Step 1: Type -->
+              <div class="estimator-step-group" data-step="type">
+                <div class="estimator-step-title">
+                  <span class="estimator-step-num">01</span>
+                  <span>01 — What do you need?</span>
+                </div>
+                <div class="estimator-chips">
+                  <button type="button" class="estimator-chip active" data-value="Landing Page">
+                    Landing Page
+                    <span class="chip-badge" style="background:var(--accent-gradient); color:#FFFFFF; padding:2px 7px; border-radius:12px; font-size:0.6875rem;">Launch in 3 Days</span>
+                  </button>
+                  <button type="button" class="estimator-chip" data-value="Business Website">Business Website</button>
+                  <button type="button" class="estimator-chip" data-value="Website Redesign">Website Redesign</button>
+                  <button type="button" class="estimator-chip" data-value="E-Commerce Store">E-Commerce Store</button>
+                </div>
+              </div>
+
+              <!-- Step 2: Scope & Tiers -->
+              <div class="estimator-step-group" id="scopeStepGroup">
+                <div class="estimator-step-title">
+                  <span class="estimator-step-num">02</span>
+                  <span id="step2Title">Select Landing Page Package</span>
+                </div>
+
+                <!-- Landing Page Tiers (Visible when Landing Page is active) -->
+                <div id="landingPageTiersContainer">
+                  <div class="estimator-tiers-grid">
+                    
+                    <!-- Launch Offer Tier (Default) -->
+                    <div class="estimator-tier-card active" data-tier="launch">
+                      <div class="tier-card-header">
+                        <span class="tier-name">Single Page</span>
+                        <span class="chip-badge" style="background:var(--accent-gradient); color:#FFFFFF; font-size:0.625rem; font-weight:700; padding:1px 7px; border-radius:10px;">LAUNCH OFFER</span>
+                      </div>
+                      <div class="tier-price">$200</div>
+                      <div class="tier-delivery">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        3 Days
+                      </div>
+                      <p class="tier-desc">Everything you need to launch a professional single-page website. Limited launch offer.</p>
+                    </div>
+
+                    <!-- Multi-Section Tier -->
+                    <div class="estimator-tier-card" data-tier="business">
+                      <div class="tier-card-header">
+                        <span class="tier-name">Multi-Section</span>
+                      </div>
+                      <div class="tier-price">$495 – $695</div>
+                      <div class="tier-delivery">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        3 Days
+                      </div>
+                      <p class="tier-desc">Extended storytelling sections, social metadata, and CTA conversion optimization.</p>
+                    </div>
+
+                    <!-- Advanced Tier -->
+                    <div class="estimator-tier-card" data-tier="premium">
+                      <div class="tier-card-header">
+                        <span class="tier-name">Advanced</span>
+                      </div>
+                      <div class="tier-price">$795 – $1,250</div>
+                      <div class="tier-delivery">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        3–5 Days
+                      </div>
+                      <p class="tier-desc">High-end bespoke landing page with custom animations, booking setup, and speed tuning.</p>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Multi-Page Scale Chips (Hidden by default, shown for Business Website/Redesign/E-Commerce) -->
+                <div id="generalScaleContainer" style="display: none;">
+                  <div class="estimator-chips">
+                    <button type="button" class="estimator-chip" data-scale="1-3 Pages">1 – 3 Pages</button>
+                    <button type="button" class="estimator-chip active" data-scale="4-7 Pages">4 – 7 Pages (Standard)</button>
+                    <button type="button" class="estimator-chip" data-scale="8+ Pages">8+ Pages (Enterprise)</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Step 3: Features & Add-ons -->
+              <div class="estimator-step-group" data-step="features">
+                <div class="estimator-step-title">
+                  <span class="estimator-step-num">03</span>
+                  <span>Optional Add-ons</span>
+                </div>
+
+                <div class="estimator-chips" id="addonChipsContainer">
+                  <button type="button" class="estimator-chip" data-addon="booking">
+                    <span>Booking Integration</span>
+                    <span class="chip-addon-price">+$100–$200</span>
+                  </button>
+                  <button type="button" class="estimator-chip" data-addon="animations">
+                    <span>Custom Animations</span>
+                    <span class="chip-addon-price">+$150–$300</span>
+                  </button>
+                  <button type="button" class="estimator-chip" data-addon="advancedSections">
+                    <span>Advanced Sections</span>
+                    <span class="chip-addon-price">+$100–$250</span>
+                  </button>
+                  <button type="button" class="estimator-chip" data-addon="cmsBlog">
+                    <span>CMS / Blog</span>
+                    <span class="chip-addon-price">+$200–$400</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Estimator Live Output Summary Card -->
+            <div class="estimator-result-card">
+              <div class="estimator-result-header">
+                <div class="estimator-result-label">Estimated Project Price</div>
+                <div class="estimator-result-highlight" id="estimateBudget">$200</div>
+              </div>
+
+              <div class="estimator-metrics">
+                <div>
+                  <div class="metric-title">Estimated Delivery</div>
+                  <div class="metric-value">
+                    <span id="estimateTimeline">3 Days</span>
+                    <span class="metric-badge-fast" id="deliveryBadgeFast">Limited launch offer</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="metric-title">Project Scope</div>
+                  <div class="metric-value" id="estimateScope">Single Landing Page</div>
+                </div>
+              </div>
+
+              <div class="estimator-included-summary">
+                <div class="included-summary-title">Project Type</div>
+                <div style="font-size: 0.9375rem; font-weight: 700; color: #FFFFFF; margin-bottom: 10px;" id="estimateType">
+                  Single-Page Landing Page
+                </div>
+
+                <div class="included-summary-title">Included Deliverables</div>
+                <div class="included-summary-items" id="summaryIncludedList">
+                  <span class="included-item-pill">Custom Design</span>
+                  <span class="included-item-pill">Responsive Design</span>
+                  <span class="included-item-pill">5–6 Sections</span>
+                  <span class="included-item-pill">Contact / CTA Section</span>
+                  <span class="included-item-pill">SEO &amp; Social Meta</span>
+                </div>
+              </div>
+
+              <div>
+                <p class="estimator-disclaimer" id="estimateDisclaimer">
+                  Limited launch offer. Everything you need to launch a professional single-page website. 3-day delivery for standard projects. Final scope confirmed before work begins.
+                </p>
+                <button type="button" class="btn btn-accent btn-lg estimator-cta-btn" id="applyEstimateBtn">
+                  Start Your Project →
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. FREQUENTLY ASKED QUESTIONS (FAQ) ACCORDION
+         ======================================================================== -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Common Questions</span>
+          </div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">
+            Everything you need to know about working with MikWebs.
+          </p>
+        </div>
+
+        <div class="faq-grid reveal-on-scroll">
+          
+          <!-- FAQ 1: 3-Day Delivery Timeline -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How does the 3-day landing page delivery work?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                For our standard single-page landing page launch offer, we deliver within 3 days for standard projects upon receiving your business brief and core assets. Day 1 focuses on scope discovery, Day 2 on bespoke design and 1 revision round, and Day 3 on responsive development and live deployment assistance.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item: Need something more complex? -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Need something more complex than a single-page landing page?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                The $200 launch offer is designed for a standard single-page landing page. E-commerce, CMS/blogs, advanced booking systems, custom web applications, extensive animations and additional pages are quoted separately. You can use our Scope Estimator below or contact us directly for a clear, tailored proposal.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Do you use pre-made templates or build custom designs?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Every website created by MikWebs is bespoke and handcrafted. We design specifically around your brand, target audience, and business objectives, avoiding sluggish pre-made WordPress or generic site-builder templates.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What do I need to prepare before we start?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                It helps to have a brief overview of your business, your target customers, and any existing logos or brand assets. If you don't have copywriting or imagery ready, we can assist in structuring the content flow and typographic hierarchy.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Will my website be fast and optimized for Instagram visitors?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, mobile-first design is our core standard. Since many visitors arrive via Instagram and mobile social links, we guarantee instantaneous load times, responsive scaling, thumb-friendly navigation, and zero horizontal overflow.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Do you provide maintenance and updates after launch?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes! We offer ongoing maintenance and support packages to keep your website secure, updated with new offerings, and performing at peak speeds, giving you complete peace of mind.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How does payment and project milestones work?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We generally work on a 50% initial deposit to begin design and discovery, and 50% upon final sign-off and successful launch. We provide transparent, fixed-price project quotes with no hidden fees.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         9. ABOUT MIKWEBS ("Let's build something worth visiting")
+         ======================================================================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="about-card reveal-on-scroll">
+          <div class="about-info-col">
+            <div class="eyebrow about-intro-badge">
+              <span class="eyebrow-dot"></span>
+              <span>About Studio</span>
+            </div>
+            <h2 class="about-title">Let's build something worth visiting.</h2>
+            
+            <div class="about-narrative">
+              <p>
+                <strong>MikWebs</strong> is a modern web design and development studio founded by <strong>Muhammed Irfan K</strong>, focused on creating high-performance digital experiences for businesses, startups, and brands.
+              </p>
+              <p>
+                Too many businesses are held back by cluttered templates, sluggish page loads, or websites that fail to tell their story. We believe great web design should be clean, intentional, and directly aligned with your commercial goals.
+              </p>
+              
+              <div class="about-highlight-box">
+                "We work directly with founders and business owners to create bespoke websites that build trust immediately."
+              </div>
+
+              <!-- Founder Profile Card -->
+              <div class="about-founder-badge" style="display:flex; align-items:center; gap:14px; margin-top:var(--space-xl); padding-top:var(--space-lg); border-top:1px solid var(--border-subtle);">
+                <div style="width:48px; height:48px; border-radius:50%; background:var(--accent-gradient); display:flex; align-items:center; justify-content:center; color:white; font-weight:800; font-size:1rem; flex-shrink:0; box-shadow:0 4px 14px rgba(121, 40, 202, 0.28);">
+                  MIK
+                </div>
+                <div>
+                  <div style="font-weight:700; color:var(--text-primary); font-size:1rem;">Muhammed Irfan K</div>
+                  <div style="font-size:0.8125rem; color:var(--text-muted); display:flex; align-items:center; gap:8px; margin-top:2px; flex-wrap:wrap;">
+                    <span>Founder &amp; Full-Stack Web Developer</span>
+                    <span>•</span>
+                    <a href="https://www.linkedin.com/in/muhammed-irfan-k-568334254" target="_blank" rel="noopener noreferrer" style="color:#0A66C2; text-decoration:none; display:inline-flex; align-items:center; gap:5px; font-weight:600;">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                      LinkedIn Profile ↗
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-principles-col">
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-md); color: var(--text-primary);">
+              Our Core Principles
+            </h3>
+
+            <div class="about-values-list">
+              <div class="about-val-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <div class="about-val-title">Direct Collaboration</div>
+                  <div class="about-val-desc">You speak directly to the designer and developer building your site.</div>
+                </div>
+              </div>
+
+              <div class="about-val-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <div class="about-val-title">No Bloated Templates</div>
+                  <div class="about-val-desc">Every line of code and layout element is purposeful and lean.</div>
+                </div>
+              </div>
+
+              <div class="about-val-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <div class="about-val-title">Mobile First Always</div>
+                  <div class="about-val-desc">Built for the Instagram generation navigating on modern smartphones.</div>
+                </div>
+              </div>
+
+              <div class="about-val-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <div class="about-val-title">Truthful &amp; Transparent</div>
+                  <div class="about-val-desc">Honest scope, realistic timelines, and clear deliverables from day one.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         10. CALL TO ACTION (CTA BANNER)
+         ======================================================================== -->
+    <section class="cta-section">
+      <div class="container">
+        
+        <div class="cta-banner reveal-on-scroll">
+          <div class="cta-banner-glow" aria-hidden="true"></div>
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to launch?</h2>
+            <p class="cta-text">
+              Let's turn your idea into a professional landing page.
+            </p>
+            <div class="cta-actions">
+              <a href="#contact" class="btn btn-accent btn-lg" data-action="claim-launch-offer">Start Your Project →</a>
+              <a href="https://instagram.com/mikwebs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="background:#18181B; color:#FFFFFF; border-color:#27272A;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                DM @mikwebs
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         11. CONTACT SECTION & ENQUIRY FORM
+         ======================================================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="contact-grid">
+          
+          <!-- Contact Info Left Column -->
+          <div class="contact-info-col reveal-on-scroll">
+            <div class="contact-info-header">
+              <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                <span>Get In Touch</span>
+              </div>
+              <h2 class="contact-info-title">Let's discuss your next project.</h2>
+              <p class="contact-info-desc">
+                Fill in the details below or message us directly on Instagram. We typically reply within 24 hours with ideas, timeline estimates, and next steps.
+              </p>
+            </div>
+
+            <!-- Direct Channels with copy helper -->
+            <div class="contact-channels">
+              <a href="mailto:mikwebsites@gmail.com" class="channel-card" data-copy="mikwebsites@gmail.com" title="Email mikwebsites@gmail.com">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div style="flex-grow: 1;">
+                  <div class="channel-label">Email Enquiries</div>
+                  <div class="channel-value">
+                    <span>mikwebsites@gmail.com</span>
+                    <span class="channel-copy-hint">Copy ⧉</span>
+                  </div>
+                </div>
+              </a>
+
+              <a href="tel:7306012799" class="channel-card" data-copy="7306012799" title="Call or WhatsApp +91 73060 12799">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div style="flex-grow: 1;">
+                  <div class="channel-label">Phone &amp; WhatsApp</div>
+                  <div class="channel-value">
+                    <span>+91 73060 12799</span>
+                    <span class="channel-copy-hint">Call ✆</span>
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/muhammed-irfan-k-568334254" target="_blank" rel="noopener noreferrer" class="channel-card" title="Connect with Muhammed Irfan K on LinkedIn">
+                <div class="channel-icon" style="color: #0A66C2;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                <div style="flex-grow: 1;">
+                  <div class="channel-label">Connect on LinkedIn</div>
+                  <div class="channel-value">
+                    <span>Muhammed Irfan K</span>
+                    <span class="channel-copy-hint">View ↗</span>
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://instagram.com/mikwebs" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </div>
+                <div>
+                  <div class="channel-label">Direct Message on Instagram</div>
+                  <div class="channel-value">@mikwebs</div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Response Promise -->
+            <div class="response-promise">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              <span>Quick Turnaround: All project enquiries answered within 24 hours.</span>
+            </div>
+          </div>
+
+          <!-- Contact Form Right Column -->
+          <div class="contact-form-card reveal-on-scroll">
+            <form id="projectContactForm" novalidate>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formName" class="form-label">Your Name *</label>
+                  <input type="text" id="formName" name="name" class="form-input" placeholder="e.g. Alex Miller" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="formEmail" class="form-label">Email Address *</label>
+                  <input type="email" id="formEmail" name="email" class="form-input" placeholder="alex@company.com" autocomplete="email" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formCompany" class="form-label">Business / Company <span class="optional">(Optional)</span></label>
+                  <input type="text" id="formCompany" name="company" class="form-input" placeholder="Your Brand or Venture" autocomplete="organization">
+                </div>
+
+                <div class="form-group">
+                  <label for="formProjectType" class="form-label">Project Type</label>
+                  <select id="formProjectType" name="projectType" class="form-select">
+                    <option value="New Website">New Business Website</option>
+                    <option value="Landing Page">Landing Page</option>
+                    <option value="Website Redesign">Website Redesign</option>
+                    <option value="E-Commerce">E-Commerce Store</option>
+                    <option value="Maintenance & Support">Maintenance &amp; Ongoing Support</option>
+                    <option value="Other Project">Other / Custom Requirement</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Budget Range Radio Pills -->
+              <div class="form-group">
+                <label class="form-label">Estimated Budget Range</label>
+                <div class="budget-pills">
+                  <label>
+                    <input type="radio" name="budget" value="$200 (Launch Offer)" checked>
+                    <span class="budget-pill-label">$200 (Launch Offer)</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="budget" value="$500 – $1,000">
+                    <span class="budget-pill-label">$500 – $1,000</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="budget" value="$1,000 – $2,500">
+                    <span class="budget-pill-label">$1,000 – $2,500</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="budget" value="$2,500+">
+                    <span class="budget-pill-label">$2,500+</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="formMessage" class="form-label">Tell us about your project *</label>
+                <textarea id="formMessage" name="message" class="form-textarea" placeholder="What are your goals? Do you have an existing website or brand guidelines?" required></textarea>
+              </div>
+
+              <div class="form-submit-row" style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+                <button type="submit" class="btn btn-primary btn-lg" style="flex:1.3; min-width:200px;">
+                  Send Project Enquiry
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="https://wa.me/917306012799?text=Hi%20MikWebs,%20I'd%20like%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="flex:1; min-width:170px; display:inline-flex; align-items:center; justify-content:center; gap:8px; border-color:rgba(37, 211, 102, 0.4); color:#16A34A;" title="Chat directly with Muhammed Irfan K on WhatsApp">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+
+              <!-- Status Alert Area -->
+              <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       12. FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="MikWebs Logo" class="footer-logo-img" width="168" height="38" decoding="async">
+          <p class="footer-brand-desc">
+            MikWebs is a modern web design and development studio founded by Muhammed Irfan K, crafting high-end digital experiences for businesses, brands, and entrepreneurs worldwide.
+          </p>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <a href="https://www.linkedin.com/in/muhammed-irfan-k-568334254" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn: Muhammed Irfan K</span>
+            </a>
+            <a href="https://instagram.com/mikwebs" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>Instagram: @mikwebs</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#work" class="footer-nav-link">Selected Work</a></li>
+            <li><a href="#services" class="footer-nav-link">Services</a></li>
+            <li><a href="#process" class="footer-nav-link">Our Process</a></li>
+            <li><a href="#estimator" class="footer-nav-link">Scope Estimator</a></li>
+            <li><a href="#faq" class="footer-nav-link">FAQ</a></li>
+            <li><a href="#about" class="footer-nav-link">About Studio</a></li>
+            <li><a href="#contact" class="footer-nav-link">Contact &amp; Enquiry</a></li>
+          </ul>
+        </div>
+
+        <!-- Services Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#offer" class="footer-nav-link">Landing Pages ($200)</a></li>
+            <li><a href="#services" class="footer-nav-link">Business Websites</a></li>
+            <li><a href="#services" class="footer-nav-link">Website Redesigns</a></li>
+            <li><a href="#estimator" class="footer-nav-link">Scope Estimator</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Connect -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Connect</h4>
+          <ul class="footer-nav-list">
+            <li><a href="mailto:mikwebsites@gmail.com" class="footer-nav-link">mikwebsites@gmail.com</a></li>
+            <li><a href="tel:7306012799" class="footer-nav-link">+91 73060 12799</a></li>
+            <li><a href="https://www.linkedin.com/in/muhammed-irfan-k-568334254" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn: Muhammed Irfan K</a></li>
+            <li><a href="https://instagram.com/mikwebs" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram: @mikwebs</a></li>
+            <li><a href="#contact" class="footer-nav-link">Start a Project</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 MikWebs. All rights reserved.</div>
+        <a href="#hero" class="back-to-top-btn" aria-label="Back to top">
+          Back to top
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="floating-top-btn" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- ========================================================================
+       13. PROJECT DETAIL PREVIEW MODAL WITH CAROUSEL NAVIGATION
+       ======================================================================== -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    
+    <div class="modal-dialog">
+      <!-- Carousel Top Bar -->
+      <div class="modal-carousel-bar">
+        <button type="button" class="modal-nav-btn" id="modalPrevBtn" aria-label="Previous project">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          <span>Previous</span>
+        </button>
+
+        <span class="modal-project-counter" id="modalCounter">Project 01 / 04</span>
+
+        <button type="button" class="modal-nav-btn" id="modalNextBtn" aria-label="Next project">
+          <span>Next</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-media-wrap">
+        <img src="" alt="" class="modal-img" id="modalImage">
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span class="project-category" id="modalCategory">Category</span>
+          <span class="badge badge-live" id="modalBadge">Live Client</span>
+        </div>
+
+        <h2 class="modal-title" id="modalTitle">Project Title</h2>
+        <p class="modal-subtitle" id="modalSubtitle">Project Subtitle</p>
+
+        <div class="modal-details-grid">
+          <div>
+            <h4 class="modal-section-h">The Objective</h4>
+            <p class="modal-copy" id="modalOverview"></p>
+
+            <h4 class="modal-section-h" style="margin-top: var(--space-lg);">The Solution</h4>
+            <p class="modal-copy" id="modalSolution"></p>
+
+            <h4 class="modal-section-h" style="margin-top: var(--space-lg);">Deliverables</h4>
+            <ul id="modalDeliverables" class="service-card-features" style="border:none; padding:0; gap:8px;"></ul>
+          </div>
+
+          <aside class="modal-sidebar">
+            <div>
+              <div class="sidebar-label">Industry</div>
+              <div class="sidebar-value" id="modalIndustry"></div>
+            </div>
+
+            <div>
+              <div class="sidebar-label">Timeline</div>
+              <div class="sidebar-value" id="modalTimeline"></div>
+            </div>
+
+            <div>
+              <div class="sidebar-label">Technologies</div>
+              <div class="project-services" id="modalTech" style="margin:0; gap:4px;"></div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="modal-actions" style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <a href="#contact" class="btn btn-primary" id="modalStartCta">Start a Similar Project</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="modalLiveUrl" style="display:none; align-items:center; gap:8px;">
+            <span>Visit Live Website</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/pricing-config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/modal.js"></script>
+</body>
+</html>

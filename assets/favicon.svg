@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="fav-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928CA"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#FF6B00"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#09090B"/>
+  <!-- Folded Ribbon M Mark -->
+  <g transform="translate(10, 12)">
+    <!-- Left Leg Ribbon -->
+    <path d="M 4 38 L 4 14 L 18 30 L 22 24 L 11 12 C 9 10 6 10 4 12 C 2 14 2 16 2 20 L 2 38 Z" fill="#7928CA"/>
+    <!-- Folded Apex -->
+    <path d="M 11 12 L 22 24 L 28 16 L 19 6 C 16 3 13 4 11 6 Z" fill="#E11D48"/>
+    <!-- Right Leg Ribbon -->
+    <path d="M 28 16 L 38 30 L 38 12 C 38 8 36 6 32 6 L 22 18 Z" fill="#FF6B00"/>
+    <path d="M 22 24 L 32 38 L 42 22 L 42 38 C 42 40 40 42 38 42 L 32 42 Z" fill="#FF8A00" opacity="0.9"/>
+  </g>
+</svg>

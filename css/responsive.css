@@ -1,0 +1,579 @@
+/* ==========================================================================
+   MIKWEBS PORTFOLIO - COMPREHENSIVE RESPONSIVE STYLESHEET
+   Breakpoints:
+   - Max 1024px (Tablets & Compact Laptops)
+   - Max 768px  (Tablets & Phablets)
+   - Max 540px  (Standard Mobile Screens)
+   - Max 480px  (Small Mobile Screens - iPhone 12/13/14/15, Galaxy S)
+   - Max 360px  (Ultra-Compact Screens - iPhone SE, Galaxy Fold cover)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Breakpoint: max-width 1024px (Tablets & Compact Laptops)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --space-4xl: 4.5rem;
+    --space-3xl: 3.5rem;
+    --header-height: 72px;
+  }
+
+  /* Navigation: Switch to mobile header */
+  .nav-desktop {
+    display: none;
+  }
+
+  .mobile-header-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  /* Process Grid: Keep 3 equal columns on tablet landscape */
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  /* Project Grid: 2-column editorial on tablet */
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .project-card {
+    grid-column: span 1 !important;
+  }
+
+  .project-card.featured-wide {
+    grid-column: span 2 !important;
+  }
+
+  /* About Layout */
+  .about-card {
+    grid-template-columns: 1fr;
+    padding: var(--space-3xl) var(--space-2xl);
+    gap: var(--space-2xl);
+  }
+
+  /* Scope Estimator */
+  .estimator-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  /* Contact Grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  /* Footer Columns */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+    max-width: 100%;
+  }
+
+  /* Modal Dialog */
+  .modal-details-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  /* Launch Offer Card */
+  .launch-offer-card {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Breakpoint: max-width 768px (Tablets & Large Phones)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --space-xl: 1.25rem;
+    --space-2xl: 2rem;
+    --space-3xl: 2.75rem;
+    --space-4xl: 3.75rem;
+    --header-height: 68px;
+  }
+
+  .container {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+
+  /* Header */
+  .brand-logo-img {
+    height: 32px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .hero-header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-headline {
+    font-size: clamp(2rem, 7vw, 2.625rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    min-height: 48px;
+    font-size: 0.9375rem;
+  }
+
+  .hero-offer-line {
+    font-size: 0.8125rem;
+    margin-top: var(--space-sm);
+  }
+
+  /* Hero Showcase on Mobile: Focus on Primary Featured Card */
+  .hero-portfolio-preview {
+    margin-top: var(--space-2xl);
+  }
+
+  .hero-showcase-stage {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .hero-preview-card.card-left,
+  .hero-preview-card.card-right {
+    display: none;
+  }
+
+  .hero-preview-card.card-featured {
+    transform: none;
+    box-shadow: var(--shadow-card);
+  }
+
+  .hero-preview-card.card-featured:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Launch Offer Card */
+  .launch-offer-card {
+    padding: var(--space-xl) var(--space-md);
+    gap: var(--space-xl);
+    border-radius: var(--radius-lg);
+  }
+
+  .offer-card-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+
+  .offer-action-box {
+    width: 100%;
+  }
+
+  .offer-main-btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .offer-pricing-display {
+    align-items: baseline;
+  }
+
+  .offer-price-num {
+    font-size: clamp(2.5rem, 8vw, 3rem);
+  }
+
+  /* Checklist Items: 2 columns on tablet/large mobile */
+  .checklist-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .checklist-item {
+    font-size: 0.875rem;
+  }
+
+  .delivery-standard-notice {
+    flex-direction: column;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    text-align: center;
+  }
+
+  /* Project Portfolio Grid */
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .project-card.featured-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.featured-wide .project-media {
+    min-height: 220px;
+  }
+
+  .project-card.featured-wide .project-content {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  /* Capabilities / Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .service-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  /* Process Steps (Vertical Flow) */
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .process-step {
+    padding: var(--space-lg);
+  }
+
+  /* Scope Estimator */
+  .estimator-card {
+    padding: var(--space-xl) var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .estimator-tiers-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
+
+  .estimator-tier-card {
+    padding: var(--space-md);
+  }
+
+  .estimator-chips {
+    gap: 8px;
+  }
+
+  .estimator-chip {
+    padding: 9px 14px;
+    font-size: 0.8125rem;
+    min-height: 40px;
+  }
+
+  .estimator-result-card {
+    padding: var(--space-xl) var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .estimator-result-highlight {
+    font-size: 2.25rem;
+  }
+
+  /* FAQ Accordion */
+  .faq-trigger {
+    padding: var(--space-md);
+    font-size: 0.9375rem;
+    min-height: 52px;
+  }
+
+  .faq-answer-inner {
+    padding: 0 var(--space-md) var(--space-md);
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  /* Contact Form */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-pills {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .budget-pill-label {
+    min-height: 42px;
+    padding: 10px 8px;
+  }
+
+  .contact-form-card {
+    padding: var(--space-xl) var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  /* About Values */
+  .about-values-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    padding: var(--space-3xl) var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  /* Project Modal */
+  .project-modal {
+    padding: var(--space-xs);
+  }
+
+  .modal-dialog {
+    max-height: 94vh;
+    border-radius: var(--radius-lg);
+  }
+
+  .modal-carousel-bar {
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  .modal-body {
+    padding: var(--space-md);
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+    gap: var(--space-xs);
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  /* Toast & Floating Button */
+  .toast-alert {
+    right: 16px;
+    left: 16px;
+    bottom: 84px;
+    font-size: 0.8125rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .floating-top-btn {
+    bottom: 20px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Breakpoint: max-width 540px (Mobile Screens)
+   -------------------------------------------------------------------------- */
+@media (max-width: 540px) {
+  /* Switch checklist to single column on compact mobile */
+  .checklist-items-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .work-filter-bar {
+    gap: 6px;
+  }
+
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 0.8125rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Breakpoint: max-width 480px (Small Smartphones)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: clamp(1.75rem, 6vw, 2.125rem);
+    letter-spacing: -0.02em;
+  }
+
+  .section-desc {
+    font-size: 0.9375rem;
+  }
+
+  .eyebrow {
+    font-size: 0.6875rem;
+    padding: 3px 10px;
+  }
+
+  /* Hero adjustments */
+  .hero-header-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.85rem, 7.5vw, 2.25rem);
+  }
+
+  .hero-launch-badge {
+    font-size: 0.6875rem;
+  }
+
+  .availability-pill {
+    font-size: 0.6875rem;
+    padding: 4px 10px;
+  }
+
+  /* Controls */
+  .mobile-theme-btn,
+  .mobile-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  /* About section */
+  .about-card {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .about-title {
+    font-size: 1.75rem;
+  }
+
+  /* Estimator */
+  .estimator-step-title {
+    font-size: 0.875rem;
+  }
+
+  .estimator-result-highlight {
+    font-size: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Breakpoint: max-width 360px (Ultra-Compact Screens - iPhone SE, Fold)
+   -------------------------------------------------------------------------- */
+@media (max-width: 360px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .brand-logo-img {
+    height: 28px;
+  }
+
+  .mobile-header-controls {
+    gap: 4px;
+  }
+
+  .mobile-theme-btn,
+  .mobile-toggle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero-headline {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.875rem;
+  }
+
+  .offer-price-num {
+    font-size: 2.25rem;
+  }
+
+  /* Stack budget pills to 1 column so amounts never wrap awkwardly */
+  .budget-pills {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .budget-pill-label {
+    font-size: 0.75rem;
+    padding: 8px 6px;
+  }
+
+  .estimator-chip {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .tier-price {
+    font-size: 0.9375rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. High-Contrast & Reduced Motion Preferences (Accessibility)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

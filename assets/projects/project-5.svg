@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p5-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAFAF9"/>
+      <stop offset="100%" stop-color="#E7E5E4"/>
+    </linearGradient>
+    <linearGradient id="p5-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928CA"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#FF6B00"/>
+    </linearGradient>
+    <filter id="p5-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <filter id="p5-card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#p5-bg)"/>
+
+  <!-- Subtle glow -->
+  <circle cx="950" cy="180" r="300" fill="url(#p5-accent)" opacity="0.08" filter="blur(80px)"/>
+
+  <!-- Browser Frame Window -->
+  <g transform="translate(60, 50)" filter="url(#p5-shadow)">
+    <!-- Container -->
+    <rect width="1080" height="700" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <!-- Header Bar -->
+    <rect width="1080" height="48" rx="16" fill="#F8FAFC"/>
+    <rect y="36" width="1080" height="12" fill="#F8FAFC"/>
+    <line x1="0" y1="48" x2="1080" y2="48" stroke="#E2E8F0" stroke-width="1"/>
+    
+    <!-- Window Controls -->
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+
+    <!-- Address Bar -->
+    <rect x="340" y="10" width="400" height="28" rx="8" fill="#EDF2F7"/>
+    <text x="540" y="28" fill="#64748B" font-family="sans-serif" font-size="12" font-weight="500" text-anchor="middle">https://solsticegoods.store</text>
+
+    <!-- CONTENT -->
+    <!-- Nav -->
+    <g transform="translate(60, 75)">
+      <text x="0" y="24" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" letter-spacing="2">SOLSTICE</text>
+      
+      <text x="460" y="22" fill="#334155" font-family="sans-serif" font-size="13" font-weight="600">Collection 26</text>
+      <text x="580" y="22" fill="#64748B" font-family="sans-serif" font-size="13" font-weight="500">Objects</text>
+      <text x="660" y="22" fill="#64748B" font-family="sans-serif" font-size="13" font-weight="500">Apparel</text>
+      <text x="740" y="22" fill="#64748B" font-family="sans-serif" font-size="13" font-weight="500">Journal</text>
+
+      <g transform="translate(880, 5)">
+        <rect width="140" height="32" rx="16" fill="#0F172A"/>
+        <text x="70" y="21" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Cart (3) • A$380</text>
+      </g>
+    </g>
+
+    <!-- Banner -->
+    <g transform="translate(60, 150)">
+      <text x="0" y="20" fill="#64748B" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="2">ESSENTIAL LIVING ARTIFACTS</text>
+      <text x="0" y="65" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800">
+        Engineered for timeless simplicity.
+      </text>
+    </g>
+
+    <!-- Product Grid in Store View -->
+    <g transform="translate(60, 250)">
+      <!-- Item 1 -->
+      <g filter="url(#p5-card-shadow)">
+        <rect width="300" height="380" rx="12" fill="#F8FAFC" stroke="#F1F5F9"/>
+        <!-- Product Image Placeholder -->
+        <rect x="20" y="20" width="260" height="240" rx="8" fill="#F1F5F9"/>
+        <!-- Minimal Lamp Visual -->
+        <circle cx="150" cy="110" r="45" fill="#E2E8F0"/>
+        <path d="M 125 110 L 175 110 L 160 180 L 140 180 Z" fill="#94A3B8"/>
+        <line x1="150" y1="180" x2="150" y2="210" stroke="#0F172A" stroke-width="3"/>
+        <ellipse cx="150" cy="210" rx="35" ry="6" fill="#0F172A"/>
+        
+        <text x="24" y="290" fill="#0F172A" font-family="sans-serif" font-size="16" font-weight="700">Aura Precision Table Lamp</text>
+        <text x="24" y="315" fill="#64748B" font-family="sans-serif" font-size="13">Matte anodized aluminum &amp; warm LED</text>
+        <text x="24" y="348" fill="#0F172A" font-family="sans-serif" font-size="16" font-weight="800">A$240.00</text>
+        <rect x="220" y="325" width="60" height="32" rx="6" fill="#0F172A"/>
+        <text x="250" y="346" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">+ Add</text>
+      </g>
+
+      <!-- Item 2 -->
+      <g transform="translate(330, 0)" filter="url(#p5-card-shadow)">
+        <rect width="300" height="380" rx="12" fill="#F8FAFC" stroke="#F1F5F9"/>
+        <!-- Product Image Placeholder -->
+        <rect x="20" y="20" width="260" height="240" rx="8" fill="#F1F5F9"/>
+        <!-- Minimal Ceramic Visual -->
+        <ellipse cx="150" cy="130" rx="60" ry="25" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="2"/>
+        <path d="M 90 130 Q 90 200 150 205 Q 210 200 210 130" fill="#CBD5E1"/>
+        
+        <text x="24" y="290" fill="#0F172A" font-family="sans-serif" font-size="16" font-weight="700">Monolith Ceramic Carafe</text>
+        <text x="24" y="315" fill="#64748B" font-family="sans-serif" font-size="13">Hand-thrown stoneware, satin sand glaze</text>
+        <text x="24" y="348" fill="#0F172A" font-family="sans-serif" font-size="16" font-weight="800">A$85.00</text>
+        <rect x="220" y="325" width="60" height="32" rx="6" fill="#0F172A"/>
+        <text x="250" y="346" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">+ Add</text>
+      </g>
+
+      <!-- Item 3 -->
+      <g transform="translate(660, 0)" filter="url(#p5-card-shadow)">
+        <rect width="300" height="380" rx="12" fill="#F8FAFC" stroke="#F1F5F9"/>
+        <!-- Product Image Placeholder -->
+        <rect x="20" y="20" width="260" height="240" rx="8" fill="#F1F5F9"/>
+        <!-- Watch Visual -->
+        <circle cx="150" cy="140" r="50" fill="#0F172A"/>
+        <circle cx="150" cy="140" r="42" fill="#1E293B"/>
+        <line x1="150" y1="140" x2="150" y2="115" stroke="#FFFFFF" stroke-width="2"/>
+        <line x1="150" y1="140" x2="170" y2="140" stroke="url(#p5-accent)" stroke-width="2"/>
+        <rect x="135" y="70" width="30" height="20" fill="#334155"/>
+        <rect x="135" y="190" width="30" height="20" fill="#334155"/>
+        
+        <text x="24" y="290" fill="#0F172A" font-family="sans-serif" font-size="16" font-weight="700">Chronograph Zero 01</text>
+        <text x="24" y="315" fill="#64748B" font-family="sans-serif" font-size="13">Swiss quartz movement, sapphire glass</text>
+        <text x="24" y="348" fill="#0F172A" font-family="sans-serif" font-size="16" font-weight="800">A$320.00</text>
+        <rect x="220" y="325" width="60" height="32" rx="6" fill="#0F172A"/>
+        <text x="250" y="346" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">+ Add</text>
+      </g>
+    </g>
+  </g>
+</svg>

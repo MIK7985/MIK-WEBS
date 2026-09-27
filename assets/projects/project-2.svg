@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p2-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+    <linearGradient id="p2-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928CA"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#FF6B00"/>
+    </linearGradient>
+    <linearGradient id="p2-card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272A"/>
+      <stop offset="100%" stop-color="#18181B"/>
+    </linearGradient>
+    <filter id="p2-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#p2-bg)"/>
+
+  <!-- Ambient light -->
+  <circle cx="200" cy="200" r="350" fill="url(#p2-accent)" opacity="0.1" filter="blur(80px)"/>
+
+  <!-- Browser Frame Window -->
+  <g transform="translate(60, 50)" filter="url(#p2-shadow)">
+    <!-- Browser Container -->
+    <rect width="1080" height="700" rx="16" fill="#121214" stroke="#27272A" stroke-width="1.5"/>
+    
+    <!-- Header Bar -->
+    <rect width="1080" height="48" rx="16" fill="#18181B"/>
+    <rect y="36" width="1080" height="12" fill="#18181B"/>
+    <line x1="0" y1="48" x2="1080" y2="48" stroke="#27272A" stroke-width="1"/>
+    
+    <!-- Window Controls -->
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+
+    <!-- Address Bar -->
+    <rect x="340" y="10" width="400" height="28" rx="8" fill="#27272A"/>
+    <text x="540" y="28" fill="#A1A1AA" font-family="sans-serif" font-size="12" font-weight="500" text-anchor="middle">https://kromastudio.design</text>
+
+    <!-- CONTENT -->
+    <!-- Nav -->
+    <g transform="translate(50, 75)">
+      <text x="0" y="24" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.5">KROMA<tspan fill="#E11D48">.</tspan></text>
+      
+      <text x="600" y="22" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="600">Work</text>
+      <text x="680" y="22" fill="#71717A" font-family="sans-serif" font-size="13" font-weight="500">Practice</text>
+      <text x="760" y="22" fill="#71717A" font-family="sans-serif" font-size="13" font-weight="500">Agency</text>
+      <text x="840" y="22" fill="#71717A" font-family="sans-serif" font-size="13" font-weight="500">Journal</text>
+
+      <rect x="910" y="4" width="70" height="28" rx="14" fill="#27272A"/>
+      <text x="945" y="22" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle">Index</text>
+    </g>
+
+    <!-- Hero Title -->
+    <g transform="translate(50, 150)">
+      <text x="0" y="32" fill="#A1A1AA" font-family="sans-serif" font-size="13" font-weight="600" letter-spacing="2">INDEPENDENT DESIGN &amp; BRANDING ARCHIVE</text>
+      <text x="0" y="88" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" letter-spacing="-1">
+        We construct visual identities &amp;
+      </text>
+      <text x="0" y="142" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" letter-spacing="-1">
+        digital artifacts for bold thinkers.
+      </text>
+    </g>
+
+    <!-- Asymmetric Editorial Grid -->
+    <g transform="translate(50, 330)">
+      <!-- Left Card (Featured Work) -->
+      <g>
+        <rect width="470" height="320" rx="14" fill="url(#p2-card1)" stroke="#27272A"/>
+        
+        <!-- Inner Visual element -->
+        <g transform="translate(30, 30)">
+          <!-- Abstract Graphic Form -->
+          <rect width="410" height="190" rx="8" fill="#18181B"/>
+          <circle cx="120" cy="95" r="55" fill="none" stroke="url(#p2-accent)" stroke-width="8"/>
+          <rect x="220" y="55" width="80" height="80" rx="12" fill="url(#p2-accent)" opacity="0.8"/>
+          <line x1="330" y1="50" x2="330" y2="140" stroke="#FFFFFF" stroke-width="4"/>
+          <line x1="350" y1="65" x2="350" y2="125" stroke="#71717A" stroke-width="3"/>
+          <line x1="370" y1="80" x2="370" y2="110" stroke="#E11D48" stroke-width="3"/>
+        </g>
+        
+        <text x="30" y="260" fill="#FFFFFF" font-family="sans-serif" font-size="18" font-weight="700">Monolith Architecture System</text>
+        <text x="30" y="285" fill="#71717A" font-family="sans-serif" font-size="13">Identity • Physical Direction • Web Canvas</text>
+        <text x="440" y="275" fill="#FFFFFF" font-family="sans-serif" font-size="16" text-anchor="end">2026 →</text>
+      </g>
+
+      <!-- Right Card (Secondary Work) -->
+      <g transform="translate(500, 0)">
+        <rect width="480" height="320" rx="14" fill="url(#p2-card1)" stroke="#27272A"/>
+        
+        <!-- Inner Visual element -->
+        <g transform="translate(30, 30)">
+          <rect width="420" height="190" rx="8" fill="#18181B"/>
+          <text x="210" y="110" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900" text-anchor="middle" letter-spacing="-2">HYPERSPACE</text>
+          <text x="210" y="140" fill="url(#p2-accent)" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="4">IMMERSIVE TYPOGRAPHY</text>
+        </g>
+        
+        <text x="30" y="260" fill="#FFFFFF" font-family="sans-serif" font-size="18" font-weight="700">Hyperspace Interactive Sound</text>
+        <text x="30" y="285" fill="#71717A" font-family="sans-serif" font-size="13">Digital Experience • WebGL Canvas</text>
+        <text x="450" y="275" fill="#FFFFFF" font-family="sans-serif" font-size="16" text-anchor="end">2026 →</text>
+      </g>
+    </g>
+  </g>
+</svg>

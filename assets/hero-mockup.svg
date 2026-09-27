@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="hero-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928CA"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#FF6B00"/>
+    </linearGradient>
+    <linearGradient id="device-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+    <linearGradient id="screen-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAFAFA"/>
+      <stop offset="100%" stop-color="#F4F4F5"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="hero-shadow" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="30" stdDeviation="35" flood-color="#000000" flood-opacity="0.14"/>
+    </filter>
+    <filter id="phone-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="25" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+    <filter id="pill-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient background glow behind mockup -->
+  <circle cx="600" cy="300" r="380" fill="url(#hero-accent)" opacity="0.07" filter="blur(80px)"/>
+
+  <!-- DESKTOP BROWSER PREVIEW (Main Stage) -->
+  <g transform="translate(60, 40)" filter="url(#hero-shadow)">
+    <!-- Browser Frame Outer Border -->
+    <rect width="980" height="620" rx="16" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1.5"/>
+    
+    <!-- Header / Tab Bar -->
+    <path d="M 0 16 Q 0 0 16 0 L 964 0 Q 980 0 980 16 L 980 50 L 0 50 Z" fill="#F8FAFC"/>
+    <line x1="0" y1="50" x2="980" y2="50" stroke="#E4E4E7" stroke-width="1"/>
+
+    <!-- Window Controls -->
+    <circle cx="28" cy="25" r="5.5" fill="#EF4444"/>
+    <circle cx="48" cy="25" r="5.5" fill="#F59E0B"/>
+    <circle cx="68" cy="25" r="5.5" fill="#10B981"/>
+
+    <!-- Search/Address Bar -->
+    <rect x="290" y="11" width="400" height="28" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="310" cy="25" r="4" fill="#10B981"/>
+    <text x="325" y="30" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500">https://mikwebs.com/preview</text>
+
+    <!-- Browser Viewport / Web Page Canvas -->
+    <g transform="translate(0, 50)">
+      <!-- Page Navigation Header -->
+      <rect width="980" height="65" fill="#FFFFFF"/>
+      <line x1="0" y1="65" x2="980" y2="65" stroke="#F1F5F9" stroke-width="1"/>
+      
+      <!-- Logo mark miniature -->
+      <g transform="translate(50, 18)">
+        <rect width="30" height="30" rx="6" fill="#0A0A0B"/>
+        <path d="M 8 22 L 12 10 L 15 17 L 18 10 L 22 22" fill="none" stroke="url(#hero-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="40" y="21" fill="#09090B" font-family="sans-serif" font-size="16" font-weight="800" letter-spacing="-0.5">MikWebs Studio</text>
+      </g>
+
+      <g transform="translate(540, 24)" font-family="sans-serif" font-size="13" font-weight="500">
+        <text x="0" y="0" fill="#09090B">Selected Work</text>
+        <text x="120" y="0" fill="#64748B">Services</text>
+        <text x="210" y="0" fill="#64748B">Process</text>
+      </g>
+      
+      <!-- CTA Button in mockup -->
+      <rect x="830" y="15" width="105" height="34" rx="8" fill="#0A0A0B"/>
+      <text x="882" y="37" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Get in Touch</text>
+
+      <!-- Mockup Hero Content -->
+      <g transform="translate(60, 60)">
+        <!-- Tag -->
+        <rect x="0" y="0" width="180" height="26" rx="13" fill="#F4F4F5"/>
+        <circle cx="14" cy="13" r="4" fill="url(#hero-accent)"/>
+        <text x="26" y="17" fill="#18181B" font-family="sans-serif" font-size="11" font-weight="600">STUDIO SHOWCASE 2026</text>
+
+        <!-- Large Hero Title -->
+        <text x="0" y="70" fill="#09090B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">
+          Engineering Digital Distinction
+        </text>
+        <text x="0" y="105" fill="#52525B" font-family="sans-serif" font-size="15" font-weight="400">
+          Transforming high-performing businesses into recognized industry authorities.
+        </text>
+
+        <!-- 3 Feature Columns -->
+        <g transform="translate(0, 150)">
+          <!-- Col 1 -->
+          <rect width="260" height="180" rx="12" fill="#FAFAFA" stroke="#E4E4E7"/>
+          <circle cx="36" cy="36" r="16" fill="#09090B"/>
+          <path d="M 30 36 L 42 36 M 36 30 L 36 42" stroke="url(#hero-accent)" stroke-width="2"/>
+          <text x="24" y="85" fill="#09090B" font-family="sans-serif" font-size="15" font-weight="700">Artisan Web Design</text>
+          <text x="24" y="112" fill="#71717A" font-family="sans-serif" font-size="12" line-height="1.5">
+            Bespoke typography, responsive
+          </text>
+          <text x="24" y="130" fill="#71717A" font-family="sans-serif" font-size="12">
+            grids and high-converting flow.
+          </text>
+
+          <!-- Col 2 -->
+          <g transform="translate(280, 0)">
+            <rect width="260" height="180" rx="12" fill="#FAFAFA" stroke="#E4E4E7"/>
+            <circle cx="36" cy="36" r="16" fill="#09090B"/>
+            <path d="M 28 36 L 33 41 L 44 30" fill="none" stroke="url(#hero-accent)" stroke-width="2"/>
+            <text x="24" y="85" fill="#09090B" font-family="sans-serif" font-size="15" font-weight="700">Zero-Bloat Code</text>
+            <text x="24" y="112" fill="#71717A" font-family="sans-serif" font-size="12">
+              Lightning fast load times and
+            </text>
+            <text x="24" y="130" fill="#71717A" font-family="sans-serif" font-size="12">
+              pure semantic architecture.
+            </text>
+          </g>
+
+          <!-- Col 3 -->
+          <g transform="translate(560, 0)">
+            <rect width="260" height="180" rx="12" fill="#09090B"/>
+            <circle cx="36" cy="36" r="16" fill="#27272A"/>
+            <circle cx="36" cy="36" r="6" fill="url(#hero-accent)"/>
+            <text x="24" y="85" fill="#FFFFFF" font-family="sans-serif" font-size="15" font-weight="700">Conversion Focus</text>
+            <text x="24" y="112" fill="#A1A1AA" font-family="sans-serif" font-size="12">
+              Strategically placed CTAs to turn
+            </text>
+            <text x="24" y="130" fill="#A1A1AA" font-family="sans-serif" font-size="12">
+              visitors into valuable clients.
+            </text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- MOBILE DEVICE OVERLAY (Right Lower Angle) -->
+  <g transform="translate(860, 240)" filter="url(#phone-shadow)">
+    <!-- Device Body -->
+    <rect width="280" height="480" rx="36" fill="#0A0A0C" stroke="#27272A" stroke-width="3"/>
+    
+    <!-- Screen -->
+    <rect x="10" y="10" width="260" height="460" rx="28" fill="#FFFFFF"/>
+    
+    <!-- Dynamic Island / Speaker notch -->
+    <rect x="95" y="18" width="90" height="20" rx="10" fill="#0A0A0C"/>
+    
+    <!-- Mobile Screen Content -->
+    <g transform="translate(10, 48)">
+      <!-- Mobile Header -->
+      <g transform="translate(16, 12)">
+        <text x="0" y="14" fill="#09090B" font-family="sans-serif" font-size="13" font-weight="800">MikWebs</text>
+        <!-- Hamburger bars -->
+        <rect x="200" y="4" width="20" height="2.5" rx="1" fill="#09090B"/>
+        <rect x="204" y="11" width="16" height="2.5" rx="1" fill="#09090B"/>
+      </g>
+      <line x1="0" y1="36" x2="260" y2="36" stroke="#F1F5F9" stroke-width="1"/>
+
+      <!-- Mobile Hero -->
+      <g transform="translate(16, 55)">
+        <rect width="130" height="18" rx="9" fill="#F4F4F5"/>
+        <text x="10" y="13" fill="#18181B" font-family="sans-serif" font-size="8.5" font-weight="700">MOBILE-FIRST DESIGN</text>
+        
+        <text x="0" y="48" fill="#09090B" font-family="sans-serif" font-size="18" font-weight="800" line-height="1.2">
+          Websites that
+        </text>
+        <text x="0" y="70" fill="url(#hero-accent)" font-family="sans-serif" font-size="18" font-weight="800">
+          convert visitors.
+        </text>
+
+        <text x="0" y="98" fill="#71717A" font-family="sans-serif" font-size="10.5" line-height="1.4">
+          Tailored for high-converting smartphone traffic from Instagram.
+        </text>
+
+        <!-- Mobile CTA -->
+        <rect x="0" y="125" width="228" height="34" rx="8" fill="#09090B"/>
+        <text x="114" y="146" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">View Our Work</text>
+
+        <!-- Mobile Card Preview -->
+        <rect x="0" y="175" width="228" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+        <rect x="12" y="12" width="204" height="50" rx="6" fill="#E2E8F0"/>
+        <text x="12" y="80" fill="#09090B" font-family="sans-serif" font-size="11" font-weight="700">Apex Advisory Case</text>
+        <text x="12" y="95" fill="#71717A" font-family="sans-serif" font-size="9.5">Corporate Website • 2026</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Floating Quality Badge on Left -->
+  <g transform="translate(80, 520)" filter="url(#pill-shadow)">
+    <rect width="240" height="64" rx="14" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1.5"/>
+    <g transform="translate(18, 14)">
+      <circle cx="18" cy="18" r="18" fill="url(#hero-accent)"/>
+      <path d="M 12 18 L 16 22 L 24 14" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="46" y="15" fill="#09090B" font-family="sans-serif" font-size="13" font-weight="700">100% Handcrafted</text>
+      <text x="46" y="32" fill="#71717A" font-family="sans-serif" font-size="11">Clean code &amp; responsive</text>
+    </g>
+  </g>
+</svg>

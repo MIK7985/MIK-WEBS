@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p4-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140E0A"/>
+      <stop offset="100%" stop-color="#0A0806"/>
+    </linearGradient>
+    <linearGradient id="p4-copper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="p4-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928CA"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#FF6B00"/>
+    </linearGradient>
+    <filter id="p4-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#p4-bg)"/>
+
+  <!-- Warm ambient culinary lighting -->
+  <circle cx="850" cy="350" r="400" fill="url(#p4-copper)" opacity="0.12" filter="blur(100px)"/>
+
+  <!-- Browser Frame Window -->
+  <g transform="translate(60, 50)" filter="url(#p4-shadow)">
+    <!-- Container -->
+    <rect width="1080" height="700" rx="16" fill="#17120E" stroke="#2D241C" stroke-width="1.5"/>
+    
+    <!-- Header Bar -->
+    <rect width="1080" height="48" rx="16" fill="#1C1612"/>
+    <rect y="36" width="1080" height="12" fill="#1C1612"/>
+    <line x1="0" y1="48" x2="1080" y2="48" stroke="#2D241C" stroke-width="1"/>
+    
+    <!-- Window Controls -->
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+
+    <!-- Address Bar -->
+    <rect x="340" y="10" width="400" height="28" rx="8" fill="#282019"/>
+    <text x="540" y="28" fill="#A89F91" font-family="sans-serif" font-size="12" font-weight="500" text-anchor="middle">https://vervedining.com</text>
+
+    <!-- CONTENT -->
+    <!-- Nav -->
+    <g transform="translate(60, 75)">
+      <text x="0" y="24" fill="#FBF8F5" font-family="'Times New Roman', Times, Georgia, serif" font-size="24" font-style="italic" font-weight="700">VERVE</text>
+      
+      <text x="480" y="22" fill="#C5BCB3" font-family="sans-serif" font-size="13" font-weight="500">Tasting Menu</text>
+      <text x="600" y="22" fill="#C5BCB3" font-family="sans-serif" font-size="13" font-weight="500">Wine Cellar</text>
+      <text x="710" y="22" fill="#C5BCB3" font-family="sans-serif" font-size="13" font-weight="500">Private Dining</text>
+      <text x="825" y="22" fill="#C5BCB3" font-family="sans-serif" font-size="13" font-weight="500">Story</text>
+
+      <rect x="910" y="2" width="110" height="34" rx="4" fill="url(#p4-copper)"/>
+      <text x="965" y="23" fill="#17120E" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">Reserve Table</text>
+    </g>
+
+    <!-- Hero Content -->
+    <g transform="translate(60, 160)">
+      <text x="0" y="24" fill="url(#p4-copper)" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="3">MODERN GASTRONOMY • MAYFAIR</text>
+      
+      <text x="0" y="80" fill="#FDFBF9" font-family="'Times New Roman', Georgia, serif" font-size="46" font-weight="400" line-height="1.2">
+        An intimate journey
+      </text>
+      <text x="0" y="132" fill="#FDFBF9" font-family="'Times New Roman', Georgia, serif" font-size="46" font-style="italic" font-weight="400">
+        through seasonal terroir.
+      </text>
+
+      <text x="0" y="185" fill="#A89F91" font-family="sans-serif" font-size="15" font-weight="400">
+        Crafted with wood fire, heritage produce, and rare cellar vintages.
+      </text>
+      <text x="0" y="210" fill="#A89F91" font-family="sans-serif" font-size="15" font-weight="400">
+        Curated by Executive Chef Julian Vance.
+      </text>
+
+      <!-- CTAs -->
+      <g transform="translate(0, 250)">
+        <rect width="180" height="46" rx="4" fill="#FDFBF9"/>
+        <text x="90" y="28" fill="#17120E" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">Book A Table →</text>
+
+        <rect x="195" width="160" height="46" rx="4" fill="transparent" stroke="#4A3B2C" stroke-width="1.5"/>
+        <text x="275" y="28" fill="#FDFBF9" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">Autumn Menu PDF</text>
+      </g>
+
+      <!-- Michelin note -->
+      <g transform="translate(0, 340)">
+        <circle cx="12" cy="12" r="10" fill="url(#p4-copper)"/>
+        <text x="12" y="16" fill="#17120E" font-family="sans-serif" font-size="12" font-weight="800" text-anchor="middle">★</text>
+        <text x="32" y="16" fill="#E7DFD5" font-family="sans-serif" font-size="13" font-weight="500">Two Michelin Stars 2026 • Relais &amp; Châteaux</text>
+      </g>
+    </g>
+
+    <!-- Visual Food / Wine Card Preview on Right -->
+    <g transform="translate(560, 150)">
+      <rect width="460" height="380" rx="14" fill="#201913" stroke="#382C22" stroke-width="1.5"/>
+      
+      <!-- Styled inner plate art -->
+      <g transform="translate(30, 30)">
+        <rect width="400" height="210" rx="8" fill="#140F0B"/>
+        <!-- Artistic plate composition -->
+        <circle cx="200" cy="105" r="75" fill="#282019" stroke="#3D3025" stroke-width="2"/>
+        <circle cx="200" cy="105" r="50" fill="#1A1410"/>
+        <!-- Garnish styling -->
+        <circle cx="190" cy="95" r="14" fill="url(#p4-copper)"/>
+        <circle cx="215" cy="115" r="10" fill="#E11D48"/>
+        <path d="M 160 115 Q 185 80 230 110" fill="none" stroke="#22C55E" stroke-width="3"/>
+        <circle cx="180" cy="125" r="3" fill="#F59E0B"/>
+        <circle cx="225" cy="90" r="2.5" fill="#FFFFFF"/>
+      </g>
+
+      <text x="30" y="280" fill="#FDFBF9" font-family="'Times New Roman', Georgia, serif" font-size="20" font-weight="700">Wood-Smoked Wild Turbot</text>
+      <text x="30" y="305" fill="#A89F91" font-family="sans-serif" font-size="13">Brown butter emulsion, fermented chanterelles &amp; sea herbs</text>
+      <text x="30" y="335" fill="url(#p4-copper)" font-family="sans-serif" font-size="13" font-weight="700">Pairing: 2018 Domaine Leflaive Puligny-Montrachet</text>
+    </g>
+  </g>
+</svg>

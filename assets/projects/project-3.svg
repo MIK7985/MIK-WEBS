@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p3-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="p3-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928CA"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#FF6B00"/>
+    </linearGradient>
+    <linearGradient id="p3-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="p3-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#p3-bg)"/>
+
+  <!-- Radial grid glow -->
+  <circle cx="600" cy="180" r="450" fill="url(#p3-accent)" opacity="0.12" filter="blur(90px)"/>
+
+  <!-- Browser Frame Window -->
+  <g transform="translate(60, 50)" filter="url(#p3-shadow)">
+    <!-- Container -->
+    <rect width="1080" height="700" rx="16" fill="#0B0F19" stroke="#1F2937" stroke-width="1.5"/>
+    
+    <!-- Header Bar -->
+    <rect width="1080" height="48" rx="16" fill="#111827"/>
+    <rect y="36" width="1080" height="12" fill="#111827"/>
+    <line x1="0" y1="48" x2="1080" y2="48" stroke="#1F2937" stroke-width="1"/>
+    
+    <!-- Window Controls -->
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+
+    <!-- Address Bar -->
+    <rect x="340" y="10" width="400" height="28" rx="8" fill="#1F2937"/>
+    <text x="540" y="28" fill="#9CA3AF" font-family="sans-serif" font-size="12" font-weight="500" text-anchor="middle">https://lumina.dev/scale</text>
+
+    <!-- CONTENT -->
+    <!-- Nav -->
+    <g transform="translate(50, 75)">
+      <!-- Logo icon -->
+      <polygon points="0,22 14,0 28,22 14,16" fill="url(#p3-accent)"/>
+      <text x="38" y="22" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800">lumina<tspan fill="#38BDF8">.ai</tspan></text>
+      
+      <text x="520" y="20" fill="#9CA3AF" font-family="sans-serif" font-size="13" font-weight="500">Infrastructure</text>
+      <text x="640" y="20" fill="#9CA3AF" font-family="sans-serif" font-size="13" font-weight="500">Security</text>
+      <text x="730" y="20" fill="#9CA3AF" font-family="sans-serif" font-size="13" font-weight="500">Pricing</text>
+      <text x="810" y="20" fill="#9CA3AF" font-family="sans-serif" font-size="13" font-weight="500">Docs</text>
+
+      <rect x="880" y="2" width="130" height="34" rx="17" fill="url(#p3-accent)"/>
+      <text x="945" y="23" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">Start Free Trial</text>
+    </g>
+
+    <!-- Hero Section -->
+    <g transform="translate(60, 155)">
+      <!-- Release pill -->
+      <rect x="360" y="0" width="240" height="26" rx="13" fill="#1F2937" stroke="#374151"/>
+      <circle cx="375" cy="13" r="4" fill="#10B981"/>
+      <text x="480" y="17" fill="#E5E7EB" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle">v4.2 Engine Released • Zero Latency</text>
+
+      <!-- Headline -->
+      <text x="480" y="65" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800" text-anchor="middle">
+        Distributed Cloud Intelligence
+      </text>
+      <text x="480" y="112" fill="url(#p3-cyan)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800" text-anchor="middle">
+        For Real-Time Edge Workloads.
+      </text>
+
+      <!-- Subtitle -->
+      <text x="480" y="152" fill="#9CA3AF" font-family="sans-serif" font-size="14" font-weight="400" text-anchor="middle">
+        Deploy globally synchronized event streaming and autonomous micro-agents in seconds.
+      </text>
+
+      <!-- Buttons -->
+      <rect x="340" y="180" width="150" height="42" rx="8" fill="#FFFFFF"/>
+      <text x="415" y="206" fill="#0B0F19" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">Deploy Cluster →</text>
+
+      <rect x="505" y="180" width="140" height="42" rx="8" fill="#1F2937" stroke="#374151"/>
+      <text x="575" y="206" fill="#E5E7EB" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">Read Documentation</text>
+    </g>
+
+    <!-- Code / Architecture Box in Center Bottom -->
+    <g transform="translate(140, 420)">
+      <rect width="800" height="230" rx="12" fill="#0D1322" stroke="#1F2937" stroke-width="1.5"/>
+      
+      <!-- Code Tab Bar -->
+      <rect width="800" height="34" rx="12" fill="#111827"/>
+      <rect y="22" width="800" height="12" fill="#111827"/>
+      <line x1="0" y1="34" x2="800" y2="34" stroke="#1F2937"/>
+      <text x="25" y="22" fill="#38BDF8" font-family="monospace" font-size="12">cluster.config.ts</text>
+      <text x="160" y="22" fill="#6B7280" font-family="monospace" font-size="12">pipeline.yaml</text>
+      <text x="280" y="22" fill="#6B7280" font-family="monospace" font-size="12">edge-worker.rs</text>
+
+      <!-- Code lines -->
+      <g transform="translate(25, 60)" font-family="Consolas, 'Courier New', monospace" font-size="13">
+        <text y="0"><tspan fill="#F43F5E">import</tspan> { <tspan fill="#38BDF8">createEdgeCluster</tspan>, <tspan fill="#38BDF8">autoSync</tspan> } <tspan fill="#F43F5E">from</tspan> <tspan fill="#A7F3D0">'@lumina/core'</tspan>;</text>
+        <text y="28"><tspan fill="#6B7280">// Initialize ultra-low latency mesh with zero cold-starts</text>
+        <text y="54"><tspan fill="#F43F5E">export const</tspan> <tspan fill="#FBBF24">cluster</tspan> = <tspan fill="#38BDF8">createEdgeCluster</tspan>({</text>
+        <text y="80">  regions: [<tspan fill="#A7F3D0">'iad'</tspan>, <tspan fill="#A7F3D0">'fra'</tspan>, <tspan fill="#A7F3D0">'hnd'</tspan>, <tspan fill="#A7F3D0">'syd'</tspan>],</text>
+        <text y="106">  throughput: <tspan fill="#A7F3D0">'10M_REQ_PER_SEC'</tspan>, faultTolerance: <tspan fill="#38BDF8">true</tspan></text>
+        <text y="132">});</text>
+      </g>
+
+      <!-- Interactive Benchmark badge on right -->
+      <g transform="translate(560, 60)">
+        <rect width="210" height="135" rx="8" fill="#131C31" stroke="#1E293B"/>
+        <text x="20" y="30" fill="#9CA3AF" font-family="sans-serif" font-size="11" font-weight="600">EDGE BENCHMARK</text>
+        <text x="20" y="65" fill="#10B981" font-family="sans-serif" font-size="32" font-weight="800">1.4 ms</text>
+        <text x="20" y="90" fill="#6B7280" font-family="sans-serif" font-size="11">Global p99 Response Latency</text>
+        <rect x="20" y="110" width="170" height="6" rx="3" fill="#1F2937"/>
+        <rect x="20" y="110" width="162" height="6" rx="3" fill="#10B981"/>
+      </g>
+    </g>
+  </g>
+</svg>
