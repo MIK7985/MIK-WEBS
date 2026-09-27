@@ -58,6 +58,29 @@ function initScrollEngine() {
       }
     }
 
+    // D. ScrollSpy Active Section Detection
+    const sections = ['contact', 'about', 'faq', 'estimator', 'process', 'services', 'work', 'offer', 'hero'];
+    let currentSection = '';
+    const scrollOffset = scrollTop + 160;
+
+    for (let id of sections) {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollOffset) {
+        currentSection = id === 'offer' ? 'work' : id;
+        break;
+      }
+    }
+
+    const allNavLinks = document.querySelectorAll('.nav-menu .nav-link, .mobile-nav-link');
+    allNavLinks.forEach(link => {
+      const target = link.getAttribute('href');
+      if (currentSection && target === `#${currentSection}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
     ticking = false;
   };
 
